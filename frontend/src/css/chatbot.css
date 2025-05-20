@@ -1,9 +1,8 @@
-/* Chatbot Icon Styles */
 .chatbot-icon {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: white;
   width: 60px;
   height: 60px;
@@ -19,7 +18,7 @@
 
 .chatbot-icon:hover {
   transform: scale(1.1);
-  background-color: var(--secondary-color);
+  background-color: #ff8400;
 }
 
 .chatbot-icon i {

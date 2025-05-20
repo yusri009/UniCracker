@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import "../css/home.css";
+
 export default function Home() {
   return (
     <div className="home">
@@ -11,9 +14,9 @@ export default function Home() {
               on their Z-score, making the selection process easier and more
               informed.
             </p>
-            <a href="courseorder.html" className="btn">
+            <Link to="/courseorder" className="btn">
               Find Courses
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -226,13 +229,13 @@ export default function Home() {
             UniCracker to discover courses that match your Z-score and academic
             goals.
           </p>
-          <a
-            href="courseorder.html"
+          <Link
+            to="/courseorder"
             className="btn"
             style={{ backgroundColor: "white", color: "var(--primary-color)" }}
           >
             Get Started Now
-          </a>
+          </Link>
         </div>
       </section>
     </div>
