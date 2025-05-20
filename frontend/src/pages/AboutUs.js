@@ -1,5 +1,3 @@
 export default function AboutUs() {
-  return (
-    
-  );
+  return <div></div>;
 }
