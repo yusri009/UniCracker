@@ -44,26 +44,30 @@ export default function Footer() {
           <div className="footer-column">
             <h3>Contact Us</h3>
             <ul className="footer-links">
-              <li>
+              <li style={{ fontSize: "0.84rem" }}>
                 <i
                   className="fas fa-envelope"
-                  style={{ marginRight: 10, color: "var(--secondary-color)" }}
+                  style={{
+                    marginRight: 10,
+                    color: "var(--secondary-color)",
+                    fontSize: "1rem",
+                  }}
                 ></i>
-                info@unicracker.lk
+                mohamedhanfal10@gmail.com
               </li>
               <li>
                 <i
                   className="fas fa-phone"
                   style={{ marginRight: 10, color: "var(--secondary-color)" }}
                 ></i>
-                +94 11 234 5678
+                +94 74 001 6080
               </li>
               <li>
                 <i
                   className="fas fa-map-marker-alt"
                   style={{ marginRight: 10, color: "var(--secondary-color)" }}
                 ></i>
-                Colombo, Sri Lanka
+                Kalmunai, Sri Lanka
               </li>
             </ul>
           </div>

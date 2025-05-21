@@ -142,68 +142,8 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="member-info">
-                <h3>Dr. Nimal Perera</h3>
-                <p>Founder & Education Specialist</p>
-                <div className="social-links">
-                  <a href="#">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fas fa-envelope"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="team-member">
-              <div className="member-image">
-                <div
-                  style={{
-                    height: "250px",
-                    backgroundColor: "#f5f5f5",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <p style={{ color: "#777" }}>Team Member Image</p>
-                </div>
-              </div>
-              <div className="member-info">
-                <h3>Samanthi Jayawardena</h3>
-                <p>Data Analyst & Z-Score Expert</p>
-                <div className="social-links">
-                  <a href="#">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i className="fas fa-envelope"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="team-member">
-              <div className="member-image">
-                <div
-                  style={{
-                    height: "250px",
-                    backgroundColor: "#f5f5f5",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <p style={{ color: "#777" }}>Team Member Image</p>
-                </div>
-              </div>
-              <div className="member-info">
-                <h3>Rajitha Fernando</h3>
-                <p>Lead Developer</p>
+                <h3>Mohamed Hanfal</h3>
+                <p>Founder & Full-stack Developer</p>
                 <div className="social-links">
                   <a href="#">
                     <i className="fab fa-linkedin"></i>
@@ -232,14 +172,44 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="member-info">
-                <h3>Priyanka Silva</h3>
-                <p>University Relations Manager</p>
+                <h3>Mohamed Amri</h3>
+                <p>Data Analyst</p>
                 <div className="social-links">
                   <a href="#">
                     <i className="fab fa-linkedin"></i>
                   </a>
                   <a href="#">
-                    <i className="fab fa-twitter"></i>
+                    <i className="fab fa-github"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="team-member">
+              <div className="member-image">
+                <div
+                  style={{
+                    height: "250px",
+                    backgroundColor: "#f5f5f5",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <p style={{ color: "#777" }}>Team Member Image</p>
+                </div>
+              </div>
+              <div className="member-info">
+                <h3>Yusri Ahamed</h3>
+                <p>Developer</p>
+                <div className="social-links">
+                  <a href="#">
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-github"></i>
                   </a>
                   <a href="#">
                     <i className="fas fa-envelope"></i>

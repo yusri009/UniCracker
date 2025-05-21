@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../css/home.css";
-
+import CarouselCard from "../components/CarouselCard";
 export default function Home() {
   return (
     <div className="home">
@@ -111,95 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section
-        className="testimonials"
-        style={{ padding: "5rem 0", backgroundColor: "white" }}
-      >
-        <div className="container">
-          <div className="section-title">
-            <h2>Student Success Stories</h2>
-            <p>
-              Hear from students who found their ideal university path with
-              UniCracker
-            </p>
-          </div>
-          <div className="features-grid">
-            <div className="feature-card" style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                  backgroundColor: "#ddd",
-                  margin: "0 auto 1.5rem",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  src=""
-                  alt=""
-                  id="testimonial-img-1"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
-              <h3>User 1</h3>
-              <p style={{ fontStyle: "italic" }}>
-                "UniCracker helped me find the perfect engineering program that
-                matched my Z-score. I'm now studying at University of Moratuwa!"
-              </p>
-            </div>
-            <div className="feature-card" style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                  backgroundColor: "#ddd",
-                  margin: "0 auto 1.5rem",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  src=""
-                  alt=""
-                  id="testimonial-img-2"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
-              <h3>User 2</h3>
-              <p style={{ fontStyle: "italic" }}>
-                "The course ordering feature saved me so much time and stress
-                during university applications. Highly recommend!"
-              </p>
-            </div>
-            <div className="feature-card" style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                  backgroundColor: "#ddd",
-                  margin: "0 auto 1.5rem",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  src=""
-                  alt=""
-                  id="testimonial-img-3"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
-              <h3>User 3</h3>
-              <p style={{ fontStyle: "italic" }}>
-                "Thanks to UniCracker, I discovered programs I didn't even know
-                existed that perfectly matched my interests and Z-score."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CarouselCard />
 
       {/* CTA Section */}
       <section
