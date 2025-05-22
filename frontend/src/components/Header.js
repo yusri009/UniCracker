@@ -25,7 +25,7 @@ export default function Header() {
               <Link to="/aboutus">About Us</Link>
             </li>
           </ul>
-          <Link to="/">
+          <Link to="/login">
             <div className="btn">Login</div>
           </Link>
           {/* <div className="menu-toggle">

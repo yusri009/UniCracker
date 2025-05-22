@@ -6,7 +6,6 @@
     rgba(0, 188, 212, 0.8) 100%
   );
   margin-top: 20px;
-
 }
 .course-search {
   padding: 2rem;
@@ -17,20 +16,32 @@
 }
 
 .search-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-
+.column {
+  display: flex;
+  margin: 0 10px;
+}
 .form-group {
-  margin-bottom: 1rem;
+  margin: 0rem 1rem 1rem 1rem;
 }
-
+.form-group.row1,
+.row2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-right: 2rem;
+}
+.form-group.row1 {
+  margin-left: -2rem;
+}
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
   font-weight: 500;
+  width: 100%;
 }
 
 .form-group input,
@@ -40,4 +51,18 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   font-family: inherit;
+  cursor: pointer;
+  width: auto;
 }
+.form-group #district {
+  width: 300%;
+  margin-left: 2rem;
+}
+.form-group #zscore {
+  margin-left: 2rem;
+}
+/* .form-group .subject-label{
+  width: auto;
+}
+.form-group .subject-label + select {
+} */

@@ -1,14 +1,3 @@
-/* Modern variables */
-:root {
-  --primary-hover-color: #3a1f75;
-  --light-gray: #f8f9fa;
-  --border-color: #e9ecef;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --border-radius: 8px;
-  --disabled-color: #f5f5f5;
-  --disabled-text: #adb5bd;
-}
-
 /* Layout for table and filters */
 .course-results {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -140,23 +129,49 @@
   color: var(--primary-color);
   font-size: 1.5rem;
 }
-
-.summarize-btn {
+.summarize-btn,
+.save-btn,
+.year-btn {
   background-color: var(--primary-color);
   color: white;
-  border: none;
+  border: 2px solid var(--primary-color);
   padding: 0.6rem 1.2rem;
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.summarize-btn:hover {
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.toggle-year {
+  margin-right: 40%;
+}
+.year-btn {
+  margin: 0 0.3rem;
+  font-weight: 500;
+}
+.year-btn.disabled {
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.save-btn:hover,
+.year-btn:hover,
+.year-btn.disabled:hover {
   background-color: var(--primary-hover-color);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.summarize-btn,
+.summarize-btn:hover {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* Summarize Animation */

@@ -2,10 +2,7 @@ import "../css/carouselcard.css";
 
 export default function CarouselCard() {
   return (
-    <section
-      className="testimonials"
-      style={{ padding: "5rem 0", backgroundColor: "white" }}
-    >
+    <section className="testimonials" style={{ padding: "5rem 0" }}>
       <div className="container">
         <div className="section-title">
           <h2>Student Success Stories</h2>

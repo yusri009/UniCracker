@@ -370,9 +370,19 @@ export default function CourseResultsTable() {
     <div className="course-results">
       <div className="table-header">
         <h2>Course Result Table</h2>
-        <button className="btn summarize-btn" onClick={handleSummarize}>
-          Summarize
-        </button>
+        <div className="toggle-year">
+          <button className="btn year-btn">2024</button>
+          <button className="btn year-btn">2023</button>
+          <button className="btn year-btn disabled">2022</button>
+        </div>
+        <div className="table-actions">
+          <button className="btn summarize-btn" onClick={handleSummarize}>
+            Summarize
+          </button>
+          <button className="btn save-btn">
+            Save Order
+          </button>
+        </div>
       </div>
 
       <div className="table-layout">
@@ -418,9 +428,9 @@ export default function CourseResultsTable() {
             <table className="custom-course-table">
               <thead>
                 <tr>
-                  <th onClick={() => requestSort("id")}>
+                  {/* <th onClick={() => requestSort("id")}>
                     No. {getSortDirectionIndicator("id")}
-                  </th>
+                  </th> */}
                   <th onClick={() => requestSort("uniCode")}>
                     Uni Code {getSortDirectionIndicator("uniCode")}
                   </th>
@@ -436,9 +446,9 @@ export default function CourseResultsTable() {
                   <th onClick={() => requestSort("zScore2023")}>
                     2023 Z Score {getSortDirectionIndicator("zScore2023")}
                   </th>
-                  <th onClick={() => requestSort("zScore2022")}>
+                  {/* <th onClick={() => requestSort("zScore2022")}>
                     2022 Z Score {getSortDirectionIndicator("zScore2022")}
-                  </th>
+                  </th> */}
                   <th onClick={() => requestSort("avgZScore")}>
                     Average Z Score {getSortDirectionIndicator("avgZScore")}
                   </th>
@@ -458,13 +468,13 @@ export default function CourseResultsTable() {
                     onClick={(e) => toggleRowDisabled(course.id, e)}
                     className={course.disabled ? "disabled-row" : ""}
                   >
-                    <td>{course.id}</td>
+                    {/* <td>{course.id}</td> */}
                     <td>{course.uniCode}</td>
                     <td>{course.course}</td>
                     <td>{course.university}</td>
                     <td>{course.zScore2024.toFixed(4)}</td>
                     <td>{course.zScore2023.toFixed(4)}</td>
-                    <td>{course.zScore2022.toFixed(4)}</td>
+                    {/* <td>{course.zScore2022.toFixed(4)}</td> */}
                     <td>{course.avgZScore.toFixed(4)}</td>
                   </tr>
                 ))}

@@ -24,6 +24,9 @@ export default function Home() {
               Find Courses
             </Link>
           </div>
+          <div className="hero-image">
+            <img src="/images/home-img.png" alt="Hero" />
+          </div>
         </div>
       </section>
 

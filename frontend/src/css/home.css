@@ -45,11 +45,25 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image img {
+  width: 140%;
+  height: auto;
+}
 /* Features Section */
 .features {
   padding: 5rem 0;
-  background-color: white;
+  background-color: transparent;
 }
 
 .section-title {

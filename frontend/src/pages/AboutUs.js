@@ -75,7 +75,15 @@ export default function AboutUs() {
                   alignItems: "center",
                 }}
               >
-                <p style={{ color: "#777" }}>About Us Image Placeholder</p>
+                <img
+                  src="/images/aboutus.png"
+                  alt="About Us"
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    borderRadius: "10px",
+                  }}
+                ></img>
               </div>
             </div>
           </div>
@@ -90,8 +98,8 @@ export default function AboutUs() {
           <div className="section-title">
             <h2>Our Mission</h2>
             <p>
-              Empowering students to make confident decisions about their
-              academic future
+              Guiding Sri Lankan students toward the right academic path through
+              data, technology, and personalized insight.
             </p>
           </div>
           <div className="features-grid">
@@ -99,30 +107,30 @@ export default function AboutUs() {
               <div className="feature-icon">
                 <i className="fas fa-bullseye"></i>
               </div>
-              <h3>Accessibility</h3>
+              <h3>Equity</h3>
               <p>
-                Make higher education information accessible to all Sri Lankan
-                students regardless of their background or location.
+                Level the playing field by giving every student—regardless of
+                region or resources—access to accurate course data and insights.
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
                 <i className="fas fa-lightbulb"></i>
               </div>
-              <h3>Accuracy</h3>
+              <h3>Intelligence</h3>
               <p>
-                Provide precise and up-to-date information about university
-                courses and admission requirements.
+                Leverage AI and historical Z-score trends to offer smarter,
+                data-driven course matching and prioritization.
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
                 <i className="fas fa-hands-helping"></i>
               </div>
-              <h3>Guidance</h3>
+              <h3>Support</h3>
               <p>
-                Offer personalized guidance to help students navigate the
-                complex university application process.
+                Provide personalized, step-by-step guidance to make the
+                university selection journey simpler and more effective.
               </p>
             </div>
           </div>
@@ -139,19 +147,7 @@ export default function AboutUs() {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image">
-                <div
-                  style={{
-                    height: "250px",
-                    backgroundColor: "#f5f5f5",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <div className="member-image">
-                    <img src="/images/hanfal.jpg" alt="Mohamed Hanfal" />
-                  </div>
-                </div>
+                <img src="/images/hanfal.png" alt="Mohamed Hanfal" />
               </div>
               <div className="member-info">
                 <h3>Mohamed Hanfal</h3>
@@ -183,19 +179,7 @@ export default function AboutUs() {
             </div>
             <div className="team-member">
               <div className="member-image">
-                <div
-                  style={{
-                    height: "250px",
-                    backgroundColor: "#f5f5f5",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <div className="member-image">
-                    <img src="/images/amri.jpg" alt="Mohamed Amri" />
-                  </div>
-                </div>
+                <img src="/images/amri.jpg" alt="Mohamed Amri" />
               </div>
               <div className="member-info">
                 <h3>Mohamed Amri</h3>
@@ -227,19 +211,7 @@ export default function AboutUs() {
             </div>
             <div className="team-member">
               <div className="member-image">
-                <div
-                  style={{
-                    height: "250px",
-                    backgroundColor: "#f5f5f5",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <div className="member-image">
-                    <img src="/images/yusri.png" alt="Yusri Ahamed" />
-                  </div>
-                </div>
+                <img src="/images/yusri.jpg" alt="Yusri Ahamed" />
               </div>
               <div className="member-info">
                 <h3>Yusri Ahamed</h3>
@@ -290,7 +262,11 @@ export default function AboutUs() {
                 marginBottom: "1.5rem",
               }}
             >
-              <i className="fas fa-robot"></i>
+              <img
+                className="img-unibot"
+                src="/images/chatbot-icon.png"
+                alt="Uni Bot"
+              />
             </div>
             <h2
               style={{
@@ -302,10 +278,9 @@ export default function AboutUs() {
               Meet Uni Bot
             </h2>
             <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
-              Our intelligent chatbot assistant is here to answer your questions
-              about universities, courses, and the application process. Click
-              the chatbot icon in the corner of any page to start a
-              conversation!
+              Say hello to your AI-powered education assistant! Uni Bot is
+              designed to guide you through Sri Lanka’s university system — from
+              course selection to application tips.
             </p>
             <div
               style={{
@@ -323,14 +298,14 @@ export default function AboutUs() {
                   marginBottom: "1rem",
                 }}
               >
-                "Hi there! I'm Uni Bot, your personal assistant for all things
-                related to university courses in Sri Lanka. How can I help you
-                today?"
+                "Hi! I'm Uni Bot 👋. Need help finding a course, checking
+                Z-scores, or understanding university requirements? I'm here for
+                you!"
               </p>
               <p style={{ color: "#777" }}>
-                Uni Bot can help with Z-score calculations, course
-                recommendations, university information, and application
-                deadlines.
+                Uni Bot can assist with real-time Z-score insights, personalized
+                course suggestions, eligibility queries, and key academic
+                timelines.
               </p>
             </div>
           </div>

@@ -17,63 +17,186 @@ export default function CourseOrder() {
               Enter Your Details
             </h2>
             <form className="search-form">
-              <div className="form-group">
-                <label htmlFor="zscore">Your Z-Score</label>
-                <input
-                  type="number"
-                  id="zscore"
-                  name="zscore"
-                  step="0.0001"
-                  placeholder="e.g., 1.8543"
-                  required
-                />
+              <div className="column">
+                <div className="form-group row1">
+                  <label htmlFor="zscore" id="zscore">
+                    Your Z-Score
+                  </label>
+                  <input
+                    type="number"
+                    id="zscore"
+                    name="zscore"
+                    step="0.0001"
+                    placeholder="e.g., 1.8543"
+                    required
+                  />
+                </div>
+                {/* District */}
+                <div className="form-group row2">
+                  <label htmlFor="district">District</label>
+                  <select id="district" name="district" defaultValue="">
+                    <option value="" disabled>
+                      Select your district
+                    </option>
+                    {/* districts... */}
+                    <option value="colombo">Colombo</option>
+                    <option value="gampaha">Gampaha</option>
+                    <option value="kalutara">Kalutara</option>
+                    <option value="kandy">Kandy</option>
+                    <option value="matale">Matale</option>
+                    <option value="nuwara-eliya">Nuwara Eliya</option>
+                    <option value="galle">Galle</option>
+                    <option value="matara">Matara</option>
+                    <option value="hambantota">Hambantota</option>
+                    <option value="jaffna">Jaffna</option>
+                    <option value="kilinochchi">Kilinochchi</option>
+                    <option value="mannar">Mannar</option>
+                    <option value="vavuniya">Vavuniya</option>
+                    <option value="mullaitivu">Mullaitivu</option>
+                    <option value="batticaloa">Batticaloa</option>
+                    <option value="ampara">Ampara</option>
+                    <option value="trincomalee">Trincomalee</option>
+                    <option value="kurunegala">Kurunegala</option>
+                    <option value="puttalam">Puttalam</option>
+                    <option value="anuradhapura">Anuradhapura</option>
+                    <option value="polonnaruwa">Polonnaruwa</option>
+                    <option value="badulla">Badulla</option>
+                    <option value="monaragala">Monaragala</option>
+                    <option value="ratnapura">Ratnapura</option>
+                    <option value="kegalle">Kegalle</option>
+                  </select>
+                </div>
               </div>
-              <div className="form-group">
-                <label htmlFor="stream">Subject Stream</label>
-                <select id="stream" name="stream" required defaultValue="">
-                  <option value="" disabled>
-                    Select your stream
-                  </option>
-                  <option value="physical-science">Physical Science</option>
-                  <option value="biological-science">Biological Science</option>
-                  <option value="commerce">Commerce</option>
-                  <option value="arts">Arts</option>
-                  <option value="technology">Technology</option>
-                </select>
+              <div className="column">
+                {/* Subject 1 */}
+                <div className="form-group">
+                  <label>Subject 1</label>
+                  <div style={{ display: "flex", gap: "0.5rem" }}>
+                    <select
+                      className="subject-label"
+                      name="subject1"
+                      required
+                      defaultValue=""
+                    >
+                      <option value="" disabled>
+                        Select Subject
+                      </option>
+                      <option value="physics">Physics</option>
+                      <option value="chemistry">Chemistry</option>
+                      <option value="biology">Biology</option>
+                      <option value="combined-maths">Combined Maths</option>
+                      <option value="ict">ICT</option>
+                      <option value="accounting">Accounting</option>
+                      <option value="economics">Economics</option>
+                      <option value="business-studies">Business Studies</option>
+                      <option value="geography">Geography</option>
+                      <option value="political-science">
+                        Political Science
+                      </option>
+                      <option value="sinhala">Sinhala</option>
+                      <option value="tamil">Tamil</option>
+                      <option value="english">English</option>
+                    </select>
+                    <select name="result1" required defaultValue="">
+                      <option value="" disabled>
+                        Result
+                      </option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                      <option value="S">S</option>
+                      <option value="W">W</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Subject 2 */}
+                <div className="form-group">
+                  <label>Subject 2</label>
+                  <div style={{ display: "flex", gap: "0.5rem" }}>
+                    <select
+                      className="subject-label"
+                      name="subject2"
+                      required
+                      defaultValue=""
+                    >
+                      <option value="" disabled>
+                        Select Subject
+                      </option>
+                      {/* same subject options as above */}
+                      <option value="physics">Physics</option>
+                      <option value="chemistry">Chemistry</option>
+                      <option value="biology">Biology</option>
+                      <option value="combined-maths">Combined Maths</option>
+                      <option value="ict">ICT</option>
+                      <option value="accounting">Accounting</option>
+                      <option value="economics">Economics</option>
+                      <option value="business-studies">Business Studies</option>
+                      <option value="geography">Geography</option>
+                      <option value="political-science">
+                        Political Science
+                      </option>
+                      <option value="sinhala">Sinhala</option>
+                      <option value="tamil">Tamil</option>
+                      <option value="english">English</option>
+                    </select>
+                    <select name="result2" required defaultValue="">
+                      <option value="" disabled>
+                        Result
+                      </option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                      <option value="S">S</option>
+                      <option value="W">W</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Subject 3 */}
+                <div className="form-group">
+                  <label>Subject 3</label>
+                  <div style={{ display: "flex", gap: "0.5rem" }}>
+                    <select
+                      className="subject-label"
+                      name="subject3"
+                      required
+                      defaultValue=""
+                    >
+                      <option value="" disabled>
+                        Select Subject
+                      </option>
+                      {/* same subject options as above */}
+                      <option value="physics">Physics</option>
+                      <option value="chemistry">Chemistry</option>
+                      <option value="biology">Biology</option>
+                      <option value="combined-maths">Combined Maths</option>
+                      <option value="ict">ICT</option>
+                      <option value="accounting">Accounting</option>
+                      <option value="economics">Economics</option>
+                      <option value="business-studies">Business Studies</option>
+                      <option value="geography">Geography</option>
+                      <option value="political-science">
+                        Political Science
+                      </option>
+                      <option value="sinhala">Sinhala</option>
+                      <option value="tamil">Tamil</option>
+                      <option value="english">English</option>
+                    </select>
+                    <select name="result3" required defaultValue="">
+                      <option value="" disabled>
+                        Result
+                      </option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                      <option value="S">S</option>
+                      <option value="W">W</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-              <div className="form-group">
-                <label htmlFor="district">District</label>
-                <select id="district" name="district" defaultValue="">
-                  <option value="" disabled>
-                    Select your district
-                  </option>
-                  <option value="colombo">Colombo</option>
-                  <option value="gampaha">Gampaha</option>
-                  <option value="kalutara">Kalutara</option>
-                  <option value="kandy">Kandy</option>
-                  <option value="matale">Matale</option>
-                  <option value="nuwara-eliya">Nuwara Eliya</option>
-                  <option value="galle">Galle</option>
-                  <option value="matara">Matara</option>
-                  <option value="hambantota">Hambantota</option>
-                  <option value="jaffna">Jaffna</option>
-                  <option value="kilinochchi">Kilinochchi</option>
-                  <option value="mannar">Mannar</option>
-                  <option value="vavuniya">Vavuniya</option>
-                  <option value="mullaitivu">Mullaitivu</option>
-                  <option value="batticaloa">Batticaloa</option>
-                  <option value="ampara">Ampara</option>
-                  <option value="trincomalee">Trincomalee</option>
-                  <option value="kurunegala">Kurunegala</option>
-                  <option value="puttalam">Puttalam</option>
-                  <option value="anuradhapura">Anuradhapura</option>
-                  <option value="polonnaruwa">Polonnaruwa</option>
-                  <option value="badulla">Badulla</option>
-                  <option value="monaragala">Monaragala</option>
-                  <option value="ratnapura">Ratnapura</option>
-                  <option value="kegalle">Kegalle</option>
-                </select>
-              </div>
+              {/* Button */}
               <div
                 className="form-group"
                 style={{
