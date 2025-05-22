@@ -30,20 +30,33 @@ header {
   color: var(--primary-color);
   font-weight: 700;
 }
-
-.nav-links {
+.nav-tab {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
   list-style: none;
+  display: flex;
+  padding: 0 2rem;
 }
 
 .nav-links li {
   margin-left: 2rem;
 }
-
+.navbar .btn {
+  padding: 6px 20px;
+  color: var(--text-color);
+}
+.navbar .btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
 .nav-links a {
   color: var(--text-color);
   font-weight: 500;
   position: relative;
+  display: flex;
 }
 
 .nav-links a:hover {

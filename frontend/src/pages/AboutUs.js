@@ -12,8 +12,10 @@ export default function AboutUs() {
           <div className="hero-content">
             <h2>About UniCracker</h2>
             <p>
-              Learn about our mission to help Sri Lankan students find their
-              ideal university courses.
+              Discover our mission to empower Sri Lankan A/L students with the
+              tools and guidance they need to confidently choose the right
+              university courses — all based on data, transparency, and
+              accessibility.
             </p>
           </div>
         </div>
@@ -34,24 +36,32 @@ export default function AboutUs() {
                 Our Story
               </h2>
               <p style={{ marginBottom: "1.5rem" }}>
-                UniCracker was founded with a simple yet powerful mission: to
-                simplify the university course selection process for Sri Lankan
-                students. We understand that choosing the right university
-                course is one of the most important decisions in a student's
-                academic journey.
+                UniCracker was created to end the confusion many Sri Lankan A/L
+                students face when applying to university. With outdated advice
+                and unclear priorities, many students miss the courses they
+                actually deserve.
               </p>
               <p style={{ marginBottom: "1.5rem" }}>
-                Our team of education experts and software developers came
-                together to create a platform that uses Z-score data and
-                historical admission trends to help students make informed
-                decisions about their higher education path.
+                We built UniCracker as a free, smart, and transparent platform
+                that uses historical Z-score data and UGC handbook content to
+                help students choose the best-fitting courses — in the best
+                possible order.
               </p>
               <p>
-                What started as a small project has grown into a comprehensive
-                resource trusted by thousands of students across Sri Lanka. We
-                continuously update our database with the latest information to
-                ensure our users have access to accurate and relevant course
-                recommendations.
+                More than just a course finder, UniCracker is a guide. Our goal
+                is to make this the most reliable tool for university admissions
+                in Sri Lanka — so no student has to pay third parties or guess
+                their future again.
+              </p>
+              <p>
+                At UniCracker, we believe that access to quality higher
+                education guidance should be available to every student—no
+                matter where they come from or what resources they have. That's
+                why we’ve made our platform intuitive, accessible, and
+                data-driven. By combining official university handbook data,
+                historical Z-score analytics, and student-focused tools,
+                UniCracker empowers A/L students to take control of their future
+                with clarity and confidence.
               </p>
             </div>
             <div className="about-image">
@@ -138,20 +148,34 @@ export default function AboutUs() {
                     alignItems: "center",
                   }}
                 >
-                  <p style={{ color: "#777" }}>Team Member Image</p>
+                  <div className="member-image">
+                    <img src="/images/hanfal.jpg" alt="Mohamed Hanfal" />
+                  </div>
                 </div>
               </div>
               <div className="member-info">
                 <h3>Mohamed Hanfal</h3>
                 <p>Founder & Full-stack Developer</p>
                 <div className="social-links">
-                  <a href="#">
+                  <a
+                    href="https://www.linkedin.com/in/mohamedhanfal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fab fa-linkedin"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="https://github.com/mohamedhanfal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fab fa-github"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="mailto:mohamedhanfal10@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fas fa-envelope"></i>
                   </a>
                 </div>
@@ -168,20 +192,34 @@ export default function AboutUs() {
                     alignItems: "center",
                   }}
                 >
-                  <p style={{ color: "#777" }}>Team Member Image</p>
+                  <div className="member-image">
+                    <img src="/images/amri.jpg" alt="Mohamed Amri" />
+                  </div>
                 </div>
               </div>
               <div className="member-info">
                 <h3>Mohamed Amri</h3>
                 <p>Data Analyst</p>
                 <div className="social-links">
-                  <a href="#">
+                  <a
+                    href="https://www.linkedin.com/in/mohamed-amri-881521350"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fab fa-linkedin"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="https://github.com/Mohamedamri1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fab fa-github"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="mailto:mohamedamri.gm1@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fas fa-envelope"></i>
                   </a>
                 </div>
@@ -198,20 +236,34 @@ export default function AboutUs() {
                     alignItems: "center",
                   }}
                 >
-                  <p style={{ color: "#777" }}>Team Member Image</p>
+                  <div className="member-image">
+                    <img src="/images/yusri.png" alt="Yusri Ahamed" />
+                  </div>
                 </div>
               </div>
               <div className="member-info">
                 <h3>Yusri Ahamed</h3>
                 <p>Developer</p>
                 <div className="social-links">
-                  <a href="#">
+                  <a
+                    href="http://www.linkedin.com/in/yusri-ahamed-97ab7828b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fab fa-linkedin"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="https://github.com/yusri009"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fab fa-github"></i>
                   </a>
-                  <a href="#">
+                  <a
+                    href="mailto:yusriahamed369@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="fas fa-envelope"></i>
                   </a>
                 </div>

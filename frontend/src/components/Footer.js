@@ -9,8 +9,10 @@ export default function Footer() {
           <div className="footer-column">
             <h3>UniCracker</h3>
             <p style={{ color: "#bbb", marginBottom: "1rem" }}>
-              Your trusted guide to Sri Lankan university courses based on
-              Z-score analysis.
+              Your trusted companion for navigating Sri Lankan university
+              admissions — powered by
+              <br />
+              Z-score insights.
             </p>
           </div>
           <div className="footer-column">

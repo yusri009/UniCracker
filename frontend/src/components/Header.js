@@ -11,19 +11,32 @@ export default function Header() {
             <h1>UniCracker</h1>
           </div>
         </Link>
-        <ul className="nav-links">
-          <li>
-            <Link to="/" className="active">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/courseorder">Course Order</Link>
-          </li>
-          <li>
-            <Link to="/aboutus">About Us</Link>
-          </li>
-        </ul>
+        <div className="nav-tab">
+          <ul className="nav-links">
+            <li>
+              <Link to="/" className="active">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/courseorder">Course Order</Link>
+            </li>
+            <li>
+              <Link to="/aboutus">About Us</Link>
+            </li>
+          </ul>
+          <Link to="/">
+            <div className="btn">Login</div>
+          </Link>
+          {/* <div className="menu-toggle">
+            <input type="checkbox" id="menu-toggle" />
+            <label htmlFor="menu-toggle">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </label>
+          </div> */}
+        </div>
       </nav>
     </header>
   );

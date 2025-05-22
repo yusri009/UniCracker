@@ -1,30 +1,18 @@
+import CourseResultsTable from "../components/CourseResultsTable";
 import "../css/courseorder.css";
 
 export default function CourseOrder() {
   return (
     <>
-      {/* Page Banner */}
-      <section
-        className="hero"
-        style={{ height: "40vh", marginBottom: "2rem" }}
-      >
-        <div className="container">
-          <div className="hero-content">
-            <h2>Find Your Course Order</h2>
-            <p>
-              Enter your Z-score and preferences to discover the best university
-              courses for your profile.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Course Search Section */}
-      <section className="course-search-section" style={{ padding: "3rem 0" }}>
+      <section className="course-search-section">
         <div className="container">
           <div className="course-search">
             <h2
-              style={{ marginBottom: "1.5rem", color: "var(--primary-color)" }}
+              style={{
+                marginBottom: "1.5rem",
+                color: "var(--primary-color)",
+              }}
             >
               Enter Your Details
             </h2>
@@ -116,135 +104,11 @@ export default function CourseOrder() {
           <div className="section-title">
             <h2>Your Recommended Course Order</h2>
             <p>
-              Based on your Z-score and preferences, here are the courses you're
-              eligible for, ordered by admission probability.
+              Discover the best-fit university courses ranked by your Z-score
+              and preferences to maximize your admission chances.
             </p>
           </div>
-
-          {/* Sample Results (These would be dynamically generated in a real application) */}
-          <div className="course-results">
-            <div className="course-card">
-              <h3>BSc in Computer Science</h3>
-              <p>University of Moratuwa</p>
-              <div className="course-details">
-                <span className="detail-item">
-                  <i className="fas fa-chart-line"></i> Min Z-Score: 1.7890
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-users"></i> Intake: 150 students
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-check-circle"></i> High Match (95%)
-                </span>
-              </div>
-            </div>
-
-            <div className="course-card">
-              <h3>BSc in Software Engineering</h3>
-              <p>University of Colombo School of Computing</p>
-              <div className="course-details">
-                <span className="detail-item">
-                  <i className="fas fa-chart-line"></i> Min Z-Score: 1.7650
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-users"></i> Intake: 120 students
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-check-circle"></i> High Match (92%)
-                </span>
-              </div>
-            </div>
-
-            <div className="course-card">
-              <h3>BSc in Information Technology</h3>
-              <p>University of Sri Jayewardenepura</p>
-              <div className="course-details">
-                <span className="detail-item">
-                  <i className="fas fa-chart-line"></i> Min Z-Score: 1.6980
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-users"></i> Intake: 180 students
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-check-circle"></i> Good Match (85%)
-                </span>
-              </div>
-            </div>
-
-            <div className="course-card">
-              <h3>BSc in Information Systems</h3>
-              <p>University of Kelaniya</p>
-              <div className="course-details">
-                <span className="detail-item">
-                  <i className="fas fa-chart-line"></i> Min Z-Score: 1.6540
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-users"></i> Intake: 160 students
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-check-circle"></i> Good Match (80%)
-                </span>
-              </div>
-            </div>
-
-            <div className="course-card">
-              <h3>BSc in Computer Engineering</h3>
-              <p>University of Peradeniya</p>
-              <div className="course-details">
-                <span className="detail-item">
-                  <i className="fas fa-chart-line"></i> Min Z-Score: 1.7320
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-users"></i> Intake: 100 students
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-check-circle"></i> Moderate Match (75%)
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Z-Score Trends Section */}
-          <div style={{ marginTop: "4rem" }}>
-            <div className="section-title">
-              <h2>Historical Z-Score Trends</h2>
-              <p>
-                View how the minimum Z-scores for popular courses have changed
-                over the years.
-              </p>
-            </div>
-            <div
-              style={{
-                backgroundColor: "white",
-                padding: "2rem",
-                borderRadius: "10px",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "#777",
-                  marginBottom: "1rem",
-                }}
-              >
-                Interactive chart would be displayed here in the actual
-                application
-              </p>
-              <div
-                style={{
-                  height: "300px",
-                  backgroundColor: "#f5f5f5",
-                  borderRadius: "5px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <p style={{ color: "#777" }}>Z-Score Trend Chart Placeholder</p>
-              </div>
-            </div>
-          </div>
+          <CourseResultsTable />
         </div>
       </section>
     </>

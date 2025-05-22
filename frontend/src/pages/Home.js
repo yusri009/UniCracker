@@ -8,11 +8,17 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h2>Find Your Perfect University Course</h2>
+            <h2>Simplify Your University Admission Journey</h2>
             <p>
-              UniCracker helps Sri Lankan students find university courses based
-              on their Z-score, making the selection process easier and more
-              informed.
+              Struggling with university course selection after A/Ls?
+              <br />
+              UniCracker helps you choose the right course, order them smartly,
+              <br />
+              and complete the UGC application — all for free.
+            </p>
+            <p style={{ fontSize: "0.8rem", marginTop: "-1rem" }}>
+              Made for Sri Lankan Students | 100% Free | Based on Z-Score
+              History
             </p>
             <Link to="/courseorder" className="btn">
               Find Courses
@@ -27,39 +33,39 @@ export default function Home() {
           <div className="section-title">
             <h2>Why Choose UniCracker</h2>
             <p>
-              We provide comprehensive tools to help you make the best decision
-              for your academic future.
+              Empowering A/L students in Sri Lanka to navigate university
+              admissions with clarity, confidence, and ease.
             </p>
           </div>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">
-                <i className="fas fa-search"></i>
+                <i className="fas fa-brain"></i>
               </div>
-              <h3>Z-Score Based Search</h3>
+              <h3>Smart Course Planning</h3>
               <p>
-                Find university courses that match your Z-score and academic
-                achievements, ensuring you target the right opportunities.
+                Get personalized recommendations on how to order your course
+                preferences based on your Z-score and interests.
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <i className="fas fa-university"></i>
+                <i className="fas fa-graduation-cap"></i>
               </div>
-              <h3>Comprehensive University Database</h3>
+              <h3>All-in-One Guidance</h3>
               <p>
-                Access information about all Sri Lankan universities and their
-                course offerings in one convenient place.
+                From choosing the right course to completing your UGC form
+                UniCracker guides you through every step of the process.
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
-                <i className="fas fa-chart-line"></i>
+                <i className="fas fa-chart-bar"></i>
               </div>
-              <h3>Trend Analysis</h3>
+              <h3>Data-Driven Insights</h3>
               <p>
-                View historical Z-score cutoffs and admission trends to make
-                informed decisions about your university applications.
+                Explore historical Z-score trends and admission statistics to
+                make smarter decisions backed by real data.
               </p>
             </div>
           </div>
@@ -74,37 +80,39 @@ export default function Home() {
         <div className="container">
           <div className="section-title">
             <h2>How UniCracker Works</h2>
-            <p>Simple steps to find your ideal university course path</p>
+            <p>
+              Guiding Sri Lankan students from Z-score to university success
+            </p>
           </div>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">
                 <i className="fas fa-user-graduate"></i>
               </div>
-              <h3>Enter Your Z-Score</h3>
+              <h3>Input Z-Score & Stream</h3>
               <p>
-                Input your A/L Z-score and subject stream to start the course
-                matching process.
+                Start by entering your A/L Z-score, subjects and results to
+                unlock relevant course options.
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
                 <i className="fas fa-filter"></i>
               </div>
-              <h3>Filter Your Preferences</h3>
+              <h3>Explore & Compare</h3>
               <p>
-                Narrow down results by university, location, or specific course
-                interests.
+                Browse universities and filter by district, faculty, or interest
+                area for a perfect fit.
               </p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
                 <i className="fas fa-list-ol"></i>
               </div>
-              <h3>Get Your Course Order</h3>
+              <h3>Generate Course Order</h3>
               <p>
-                Receive a personalized list of courses ordered by your
-                likelihood of admission based on historical data.
+                Get a smart, ranked list of course preferences based on trends
+                and your profile.
               </p>
             </div>
           </div>
@@ -137,9 +145,10 @@ export default function Home() {
               marginRight: "auto",
             }}
           >
-            Start your journey to higher education with confidence. Use
-            UniCracker to discover courses that match your Z-score and academic
-            goals.
+            Start your higher education journey with confidence. Use UniCracker
+            to find the best-fit courses based on your Z-score, interests,
+            <br />
+            and university dreams.
           </p>
           <Link
             to="/courseorder"
