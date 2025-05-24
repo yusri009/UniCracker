@@ -15,17 +15,7 @@ export default function CourseResultsTable() {
       avgZScore: 1.7815,
       disabled: false,
     },
-    {
-      id: 2,
-      uniCode: "UOC456",
-      course: "Medicine",
-      university: "University of Colombo",
-      zScore2024: 1.923,
-      zScore2023: 1.945,
-      zScore2022: 1.912,
-      avgZScore: 1.9267,
-      disabled: false,
-    },
+
     {
       id: 3,
       uniCode: "UOP789",
@@ -46,17 +36,6 @@ export default function CourseResultsTable() {
       zScore2023: 1.672,
       zScore2022: 1.643,
       avgZScore: 1.6563,
-      disabled: false,
-    },
-    {
-      id: 5,
-      uniCode: "SLIIT202",
-      course: "Information Technology",
-      university: "Sri Lanka Institute of Information Technology",
-      zScore2024: 1.598,
-      zScore2023: 1.612,
-      zScore2022: 1.587,
-      avgZScore: 1.599,
       disabled: false,
     },
     {
@@ -82,39 +61,6 @@ export default function CourseResultsTable() {
       disabled: false,
     },
     {
-      id: 8,
-      uniCode: "OUSL201",
-      course: "Information Systems",
-      university: "Open University of Sri Lanka",
-      zScore2024: 1.356,
-      zScore2023: 1.324,
-      zScore2022: 1.31,
-      avgZScore: 1.33,
-      disabled: false,
-    },
-    {
-      id: 9,
-      uniCode: "UOM404",
-      course: "Computer Engineering",
-      university: "University of Moratuwa",
-      zScore2024: 1.902,
-      zScore2023: 1.89,
-      zScore2022: 1.875,
-      avgZScore: 1.889,
-      disabled: false,
-    },
-    {
-      id: 10,
-      uniCode: "UOP505",
-      course: "Data Science",
-      university: "University of Peradeniya",
-      zScore2024: 1.678,
-      zScore2023: 1.655,
-      zScore2022: 1.642,
-      avgZScore: 1.658,
-      disabled: false,
-    },
-    {
       id: 11,
       uniCode: "UOJ606",
       course: "Computer Science",
@@ -136,28 +82,7 @@ export default function CourseResultsTable() {
       avgZScore: 1.298,
       disabled: false,
     },
-    {
-      id: 13,
-      uniCode: "RUSL808",
-      course: "Information and Communication Technology",
-      university: "Rajarata University of Sri Lanka",
-      zScore2024: 1.344,
-      zScore2023: 1.332,
-      zScore2022: 1.3,
-      avgZScore: 1.325,
-      disabled: false,
-    },
-    {
-      id: 14,
-      uniCode: "SEUSL909",
-      course: "Computer Science and Technology",
-      university: "South Eastern University of Sri Lanka",
-      zScore2024: 1.378,
-      zScore2023: 1.36,
-      zScore2022: 1.34,
-      avgZScore: 1.359,
-      disabled: false,
-    },
+
     {
       id: 15,
       uniCode: "UWU010",
@@ -379,9 +304,7 @@ export default function CourseResultsTable() {
           <button className="btn summarize-btn" onClick={handleSummarize}>
             Summarize
           </button>
-          <button className="btn save-btn">
-            Save Order
-          </button>
+          <button className="btn save-btn">Save Order</button>
         </div>
       </div>
 

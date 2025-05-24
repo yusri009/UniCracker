@@ -14,15 +14,19 @@ export default function Header() {
         <div className="nav-tab">
           <ul className="nav-links">
             <li>
-              <Link to="/" className="active">
+              <Link to="/" className="">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/courseorder">Course Order</Link>
+              <Link to="/courseorder" className="">
+                Course Order
+              </Link>
             </li>
             <li>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/aboutus" className="active">
+                About Us
+              </Link>
             </li>
           </ul>
           <Link to="/login">
