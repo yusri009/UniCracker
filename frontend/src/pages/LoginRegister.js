@@ -64,7 +64,7 @@ const LoginRegister = () => {
       if (!formData.registerPassword)
         tempErrors.registerPassword = "Password is required";
       else if (formData.registerPassword.length < 6)
-        tempErrors.registerPassword = "Password must be at least 6 characters";
+        tempErrors.registerPassword = "At least 6 characters";
 
       if (formData.registerPassword !== formData.registerConfirmPassword)
         tempErrors.registerConfirmPassword = "Passwords do not match";
@@ -193,7 +193,14 @@ const LoginRegister = () => {
             >
               <form onSubmit={(e) => handleSubmit(e, "login")}>
                 <div className="form-group">
-                  <label htmlFor="loginEmail">Email</label>
+                  <div className="login-input-label">
+                    <label className="login-label" htmlFor="loginEmail">
+                      Email
+                    </label>
+                    {errors.loginEmail && (
+                      <span className="error-message">{errors.loginEmail}</span>
+                    )}
+                  </div>
                   <div className="input-container">
                     <i className="fas fa-envelope icon"></i>
                     <input
@@ -206,13 +213,17 @@ const LoginRegister = () => {
                       className={errors.loginEmail ? "error" : ""}
                     />
                   </div>
-                  {errors.loginEmail && (
-                    <span className="error-message">{errors.loginEmail}</span>
-                  )}
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="loginPassword">Password</label>
+                  <div className="login-input-label">
+                    <label htmlFor="loginPassword">Password</label>
+                    {errors.loginPassword && (
+                      <span className="error-message">
+                        {errors.loginPassword}
+                      </span>
+                    )}
+                  </div>
                   <div className="input-container">
                     <i className="fas fa-lock icon"></i>
                     <input
@@ -231,11 +242,6 @@ const LoginRegister = () => {
                       onClick={() => togglePasswordVisibility("login")}
                     ></i>
                   </div>
-                  {errors.loginPassword && (
-                    <span className="error-message">
-                      {errors.loginPassword}
-                    </span>
-                  )}
                 </div>
 
                 <div className="form-options">
@@ -282,7 +288,14 @@ const LoginRegister = () => {
               <form onSubmit={(e) => handleSubmit(e, "register")}>
                 <div className="register-form-scrollable">
                   <div className="form-group">
-                    <label htmlFor="registerName">Full Name</label>
+                    <div className="login-input-label">
+                      <label htmlFor="registerName">Full Name</label>
+                      {errors.registerName && (
+                        <span className="error-message">
+                          {errors.registerName}
+                        </span>
+                      )}
+                    </div>
                     <div className="input-container">
                       <i className="fas fa-user icon"></i>
                       <input
@@ -295,15 +308,17 @@ const LoginRegister = () => {
                         className={errors.registerName ? "error" : ""}
                       />
                     </div>
-                    {errors.registerName && (
-                      <span className="error-message">
-                        {errors.registerName}
-                      </span>
-                    )}
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="registerEmail">Email</label>
+                    <div className="login-input-label">
+                      <label htmlFor="registerEmail">Email</label>
+                      {errors.registerEmail && (
+                        <span className="error-message">
+                          {errors.registerEmail}
+                        </span>
+                      )}
+                    </div>
                     <div className="input-container">
                       <i className="fas fa-envelope icon"></i>
                       <input
@@ -316,16 +331,18 @@ const LoginRegister = () => {
                         className={errors.registerEmail ? "error" : ""}
                       />
                     </div>
-                    {errors.registerEmail && (
-                      <span className="error-message">
-                        {errors.registerEmail}
-                      </span>
-                    )}
                   </div>
 
                   <div>
                     <div className="form-group half">
-                      <label htmlFor="registerPassword">Password</label>
+                      <div className="login-input-label">
+                        <label htmlFor="registerPassword">Password</label>
+                        {errors.registerPassword && (
+                          <span className="error-message">
+                            {errors.registerPassword}
+                          </span>
+                        )}
+                      </div>
                       <div className="input-container">
                         <i className="fas fa-lock icon"></i>
                         <input
@@ -338,17 +355,19 @@ const LoginRegister = () => {
                           className={errors.registerPassword ? "error" : ""}
                         />
                       </div>
-                      {errors.registerPassword && (
-                        <span className="error-message">
-                          {errors.registerPassword}
-                        </span>
-                      )}
                     </div>
 
                     <div className="form-group half">
-                      <label htmlFor="registerConfirmPassword">
-                        Confirm Password
-                      </label>
+                      <div className="login-input-label">
+                        <label htmlFor="registerConfirmPassword">
+                          Confirm Password
+                        </label>
+                        {errors.registerConfirmPassword && (
+                          <span className="error-message">
+                            {errors.registerConfirmPassword}
+                          </span>
+                        )}
+                      </div>
                       <div className="input-container">
                         <i className="fas fa-lock icon"></i>
                         <input
@@ -369,16 +388,18 @@ const LoginRegister = () => {
                           onClick={() => togglePasswordVisibility("register")}
                         ></i>
                       </div>
-                      {errors.registerConfirmPassword && (
-                        <span className="error-message">
-                          {errors.registerConfirmPassword}
-                        </span>
-                      )}
                     </div>
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="registerZScore">Z-Score</label>
+                    <div className="login-input-label">
+                      <label htmlFor="registerZScore">Z-Score</label>
+                      {errors.registerZScore && (
+                        <span className="error-message">
+                          {errors.registerZScore}
+                        </span>
+                      )}
+                    </div>
                     <div className="input-container">
                       <i className="fas fa-chart-line icon"></i>
                       <input
@@ -392,11 +413,6 @@ const LoginRegister = () => {
                         className={errors.registerZScore ? "error" : ""}
                       />
                     </div>
-                    {errors.registerZScore && (
-                      <span className="error-message">
-                        {errors.registerZScore}
-                      </span>
-                    )}
                   </div>
 
                   <div className="form-row">

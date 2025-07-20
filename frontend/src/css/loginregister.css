@@ -300,9 +300,11 @@ select.error {
 .error-message {
   color: var(--error-color);
   font-size: 0.8rem;
-  margin-top: 0.3rem;
-  display: block;
+  margin-top: 0.5rem;
+  display: flex;
   animation: fadeIn 0.3s forwards;
+  width: 150%;
+  justify-content: right;
 }
 
 @keyframes fadeIn {
@@ -326,6 +328,11 @@ select.error {
 
 .toggle-password:hover {
   color: var(--primary-color);
+}
+
+.login-input-label {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Form Options */
