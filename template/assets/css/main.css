@@ -1,9 +1,0 @@
-/* Main CSS File - Import all components */
-@import url('components/global.css');
-@import url('components/header.css');
-@import url('components/footer.css');
-@import url('components/chatbot.css');
-@import url('components/hero.css');
-@import url('components/features.css');
-@import url('components/course-order.css');
-@import url('components/about.css');
