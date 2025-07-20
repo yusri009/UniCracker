@@ -183,7 +183,7 @@ export default function AboutUs() {
               </div>
               <div className="member-info">
                 <h3>Mohamed Amri</h3>
-                <p>Data Analyst</p>
+                <p>Developer</p>
                 <div className="social-links">
                   <a
                     href="https://www.linkedin.com/in/mohamed-amri-881521350"
