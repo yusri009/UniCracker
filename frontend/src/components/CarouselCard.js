@@ -19,7 +19,7 @@ export default function CarouselCard() {
 
     const cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
 
-    // Add duplicate cards for infinite scroll effect
+    // duplicate cards for infinite scroll
     carouselChildren
       .slice(-cardPerView)
       .reverse()

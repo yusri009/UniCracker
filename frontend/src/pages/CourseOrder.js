@@ -2,6 +2,98 @@ import CourseResultsTable from "../components/CourseResultsTable";
 import "../css/courseorder.css";
 
 export default function CourseOrder() {
+  const subjects = [
+    { code: "S01", name: "Physics" },
+    { code: "S02", name: "Chemistry" },
+    { code: "S03", name: "Combined Mathematics" },
+    { code: "S04", name: "Agricultural Science" },
+    { code: "S05", name: "Biology" },
+    { code: "S06", name: "Mathematics" },
+    { code: "S07", name: "Higher Mathematics" },
+    { code: "S09", name: "General English" },
+    { code: "S10", name: "Civil Technology" },
+    { code: "S11", name: "Mechanical Technology" },
+    { code: "S12", name: "Electrical, Electronic and Information Technology" },
+    { code: "S13", name: "Food Technology" },
+    { code: "S14", name: "Agriculture Technology" },
+    { code: "S15", name: "Bio Resource Technology" },
+    { code: "S16", name: "Information & Communication Technology" },
+    { code: "S17", name: "Economics" },
+    { code: "S18", name: "Geography" },
+    { code: "S19", name: "Political Science" },
+    { code: "S20", name: "Logic and Scientific Method" },
+    { code: "S21", name: "History" },
+    { code: "S22", name: "Home Economics" },
+    { code: "S23", name: "Communication & Media Studies" },
+    { code: "S24", name: "Business Statistics" },
+    { code: "S25", name: "Business Studies" },
+    { code: "S26", name: "Accounting" },
+    { code: "S27", name: "Buddhism" },
+    { code: "S28", name: "Hinduism" },
+    { code: "S29", name: "Christianity" },
+    { code: "S30", name: "Islam" },
+    { code: "S31", name: "Buddhist Civilization" },
+    { code: "S32", name: "Hindu Civilization" },
+    { code: "S33", name: "Islam Civilization" },
+    { code: "S34", name: "Greek and Roman Civilization" },
+    { code: "S35", name: "Christian Civilization" },
+    { code: "S36", name: "Art" },
+    { code: "S37", name: "Dancing (Indigenous)" },
+    { code: "S38", name: "Dancing (Bharatha)" },
+    { code: "S39", name: "Music (Oriental)" },
+    { code: "S40", name: "Music (Carnatic)" },
+    { code: "S41", name: "Music (Western)" },
+    { code: "S42", name: "Drama and Theatre (Sinhala)" },
+    { code: "S43", name: "Drama and Theatre (Tamil)" },
+    { code: "S44", name: "Drama and Theatre (English)" },
+    { code: "S45", name: "Engineering Technology" },
+    { code: "S46", name: "Biosystems Technology" },
+    { code: "S47", name: "Science for Technology" },
+    { code: "S48", name: "Sinhala" },
+    { code: "S49", name: "Tamil" },
+    { code: "S50", name: "English" },
+    { code: "S51", name: "Pali" },
+    { code: "S52", name: "Sanskrit" },
+    { code: "S53", name: "Arabic" },
+    { code: "S54", name: "Malay" },
+    { code: "S55", name: "French" },
+    { code: "S56", name: "German" },
+    { code: "S57", name: "Russian" },
+    { code: "S58", name: "Hindi" },
+    { code: "S59", name: "Chinese" },
+    { code: "S60", name: "Japanese" },
+  ];
+
+  const results = ["A", "B", "C", "S", "W"];
+
+  const districts = [
+    "Colombo",
+    "Gampaha",
+    "Kalutara",
+    "Kandy",
+    "Matale",
+    "Nuwara Eliya",
+    "Galle",
+    "Matara",
+    "Hambantota",
+    "Jaffna",
+    "Kilinochchi",
+    "Mannar",
+    "Vavuniya",
+    "Mullaitivu",
+    "Batticaloa",
+    "Ampara",
+    "Trincomalee",
+    "Kurunegala",
+    "Puttalam",
+    "Anuradhapura",
+    "Polonnaruwa",
+    "Badulla",
+    "Monaragala",
+    "Ratnapura",
+    "Kegalle",
+  ];
+
   return (
     <>
       {/* Course Search Section */}
@@ -38,32 +130,11 @@ export default function CourseOrder() {
                     <option value="" disabled>
                       Select your district
                     </option>
-                    {/* districts... */}
-                    <option value="colombo">Colombo</option>
-                    <option value="gampaha">Gampaha</option>
-                    <option value="kalutara">Kalutara</option>
-                    <option value="kandy">Kandy</option>
-                    <option value="matale">Matale</option>
-                    <option value="nuwara-eliya">Nuwara Eliya</option>
-                    <option value="galle">Galle</option>
-                    <option value="matara">Matara</option>
-                    <option value="hambantota">Hambantota</option>
-                    <option value="jaffna">Jaffna</option>
-                    <option value="kilinochchi">Kilinochchi</option>
-                    <option value="mannar">Mannar</option>
-                    <option value="vavuniya">Vavuniya</option>
-                    <option value="mullaitivu">Mullaitivu</option>
-                    <option value="batticaloa">Batticaloa</option>
-                    <option value="ampara">Ampara</option>
-                    <option value="trincomalee">Trincomalee</option>
-                    <option value="kurunegala">Kurunegala</option>
-                    <option value="puttalam">Puttalam</option>
-                    <option value="anuradhapura">Anuradhapura</option>
-                    <option value="polonnaruwa">Polonnaruwa</option>
-                    <option value="badulla">Badulla</option>
-                    <option value="monaragala">Monaragala</option>
-                    <option value="ratnapura">Ratnapura</option>
-                    <option value="kegalle">Kegalle</option>
+                    {districts.map((district) => (
+                      <option key={district} value={district}>
+                        {district}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -81,31 +152,21 @@ export default function CourseOrder() {
                       <option value="" disabled>
                         Select Subject
                       </option>
-                      <option value="physics">Physics</option>
-                      <option value="chemistry">Chemistry</option>
-                      <option value="biology">Biology</option>
-                      <option value="combined-maths">Combined Maths</option>
-                      <option value="ict">ICT</option>
-                      <option value="accounting">Accounting</option>
-                      <option value="economics">Economics</option>
-                      <option value="business-studies">Business Studies</option>
-                      <option value="geography">Geography</option>
-                      <option value="political-science">
-                        Political Science
-                      </option>
-                      <option value="sinhala">Sinhala</option>
-                      <option value="tamil">Tamil</option>
-                      <option value="english">English</option>
+                      {subjects.map((subject) => (
+                        <option key={subject.code} value={subject.code}>
+                          {subject.name}
+                        </option>
+                      ))}
                     </select>
                     <select name="result1" required defaultValue="">
                       <option value="" disabled>
                         Result
                       </option>
-                      <option value="A">A</option>
-                      <option value="B">B</option>
-                      <option value="C">C</option>
-                      <option value="S">S</option>
-                      <option value="W">W</option>
+                      {results.map((results) => (
+                        <option key={results} value={results}>
+                          {results}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -123,32 +184,21 @@ export default function CourseOrder() {
                       <option value="" disabled>
                         Select Subject
                       </option>
-                      {/* same subject options as above */}
-                      <option value="physics">Physics</option>
-                      <option value="chemistry">Chemistry</option>
-                      <option value="biology">Biology</option>
-                      <option value="combined-maths">Combined Maths</option>
-                      <option value="ict">ICT</option>
-                      <option value="accounting">Accounting</option>
-                      <option value="economics">Economics</option>
-                      <option value="business-studies">Business Studies</option>
-                      <option value="geography">Geography</option>
-                      <option value="political-science">
-                        Political Science
-                      </option>
-                      <option value="sinhala">Sinhala</option>
-                      <option value="tamil">Tamil</option>
-                      <option value="english">English</option>
+                      {subjects.map((subject) => (
+                        <option key={subject.code} value={subject.code}>
+                          {subject.name}
+                        </option>
+                      ))}
                     </select>
                     <select name="result2" required defaultValue="">
                       <option value="" disabled>
                         Result
                       </option>
-                      <option value="A">A</option>
-                      <option value="B">B</option>
-                      <option value="C">C</option>
-                      <option value="S">S</option>
-                      <option value="W">W</option>
+                      {results.map((results) => (
+                        <option key={results} value={results}>
+                          {results}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -166,32 +216,21 @@ export default function CourseOrder() {
                       <option value="" disabled>
                         Select Subject
                       </option>
-                      {/* same subject options as above */}
-                      <option value="physics">Physics</option>
-                      <option value="chemistry">Chemistry</option>
-                      <option value="biology">Biology</option>
-                      <option value="combined-maths">Combined Maths</option>
-                      <option value="ict">ICT</option>
-                      <option value="accounting">Accounting</option>
-                      <option value="economics">Economics</option>
-                      <option value="business-studies">Business Studies</option>
-                      <option value="geography">Geography</option>
-                      <option value="political-science">
-                        Political Science
-                      </option>
-                      <option value="sinhala">Sinhala</option>
-                      <option value="tamil">Tamil</option>
-                      <option value="english">English</option>
+                      {subjects.map((subject) => (
+                        <option key={subject.code} value={subject.code}>
+                          {subject.name}
+                        </option>
+                      ))}
                     </select>
                     <select name="result3" required defaultValue="">
                       <option value="" disabled>
                         Result
                       </option>
-                      <option value="A">A</option>
-                      <option value="B">B</option>
-                      <option value="C">C</option>
-                      <option value="S">S</option>
-                      <option value="W">W</option>
+                      {results.map((results) => (
+                        <option key={results} value={results}>
+                          {results}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
