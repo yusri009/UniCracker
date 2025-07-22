@@ -7,27 +7,27 @@
 }
 
 @theme {
-  --color-primary: #4a2c8f;
-  --color-secondary: #ff9800;
-  --color-accent: #00bcd4;
-  --color-text: #333333;
-  --color-light: #f5f5f5;
-  --color-dark: #212121;
-  --color-error: #f44336;
-  --color-success: #4caf50;
-  --color-primary-hover: #3a1f75;
-  --color-light-gray: #f8f9fa;
-  --color-border: #e9ecef;
-  --color-disabled: #f5f5f5;
-  --color-disabled-text: #adb5bd;
-  --color-bot-message: #f0f4ff;
-  --color-user-message: #e6f7ff;
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-accent: var(--accent-color);
+  --color-text: var(--text-color);
+  --color-light: var(--light-color);
+  --color-dark: var(--dark-color);
+  --color-error: var(--error-color);
+  --color-success: var(--success-color);
+  --color-primary-hover: var(--primary-hover-color);
+  --color-light-gray: var(--light-gray);
+  --color-border: var(--border-color);
+  --color-disabled: var(--disabled-color);
+  --color-disabled-text: var(--disabled-text);
+  --color-bot-message: var(--bot-message-color);
+  --color-user-message: var(--user-message-color);
 
-  --shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-default: var(--shadow);
+  --shadow-card: var(--card-shadow);
 
-  --transition-default: all 0.3s ease;
-  --radius-default: 8px;
+  --transition-default: var(--transition);
+  --radius-default: var(--border-radius);
 }
 
 :root {
