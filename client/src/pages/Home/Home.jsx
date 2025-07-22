@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../css/home.css";
+import "./home.css";
 import CarouselCard from "../components/CarouselCard";
 export default function Home() {
   return (

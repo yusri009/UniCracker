@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../css/courseresultstable.css";
+import "./courseresultstable.css";
 
 export default function CourseResultsTable() {
   // Sample data for demonstration

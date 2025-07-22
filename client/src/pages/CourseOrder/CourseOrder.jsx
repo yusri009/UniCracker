@@ -1,5 +1,5 @@
 import CourseResultsTable from "../components/CourseResultsTable";
-import "../css/courseorder.css";
+import "./courseorder.css";
 
 export default function CourseOrder() {
   const subjects = [

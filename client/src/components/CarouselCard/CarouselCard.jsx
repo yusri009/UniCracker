@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "../css/carouselcard.css";
+import "./carouselcard.css";
 
 export default function CarouselCard() {
   const wrapperRef = useRef(null);

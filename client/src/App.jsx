@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import CourseOrder from "./pages/CourseOrder";
-import AboutUs from "./pages/AboutUs";
-import LoginRegister from "./pages/LoginRegister";
-import ScrollToTop from "./components/ScrollToTop";
-import UniBot from "./components/UniBot";
+import Home from "./pages/Home/Home";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import CourseOrder from "./pages/CourseOrder/CourseOrder";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import LoginRegister from "./pages/LoginRegister/LoginRegister";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import UniBot from "./components/UniBot/UniBot";
 
 function App() {
   const location = useLocation();

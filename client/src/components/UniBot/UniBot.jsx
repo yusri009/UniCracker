@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../css/unibot.css";
+import "./unibot.css";
 
 const UniBot = () => {
   const [isOpen, setIsOpen] = useState(false);
