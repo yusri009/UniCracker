@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2025 UniCracker. All Rights Reserved. — Prototype</p>
+          <p>&copy; 2025 UniCracker. All Rights Reserved. — Pre Alpha</p>
         </div>
       </div>
     </footer>

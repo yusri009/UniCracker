@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #4a2c8f;
+  --secondary-color: #ff9800;
+  --transition: all 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,53 +30,4 @@ a {
 
 a:hover {
   color: var(--secondary-color);
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .nav-links {
-    margin-top: 1rem;
-  }
-
-  .nav-links li {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .hero h2 {
-    font-size: 2.5rem;
-  }
-
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
-  }
-
-  .feature-card {
-    padding: 1.5rem;
-  }
-
-  .section-title h2 {
-    font-size: 2rem;
-  }
 }

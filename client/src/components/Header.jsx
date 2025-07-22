@@ -2,6 +2,12 @@ import "../css/header.css";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
+  const handleToggle = () => {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    navToggle.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  };
   return (
     <header>
       <nav className="navbar">
@@ -41,14 +47,11 @@ export default function Header() {
           <NavLink to="/login">
             <div className="btn">Login</div>
           </NavLink>
-          {/* <div className="menu-toggle">
-            <input type="checkbox" id="menu-toggle" />
-            <label htmlFor="menu-toggle">
+          <div className="nav-toggle" onClick={handleToggle}>
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
-            </label>
-          </div> */}
+          </div>
         </div>
       </nav>
     </header>
