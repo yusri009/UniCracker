@@ -1,42 +1,76 @@
-#root {
-  max-width: 1280px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 188, 212, 0.1) 0%,
+    rgba(74, 44, 143, 0.1) 100%
+  );
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media (max-width: 576px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
 
-.read-the-docs {
-  color: #888;
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
 }
