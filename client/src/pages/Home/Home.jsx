@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./home.css";
-import CarouselCard from "../components/CarouselCard";
+import CarouselCard from "../../components/CarouselCard/CarouselCard";
 export default function Home() {
   return (
     <div className="home">

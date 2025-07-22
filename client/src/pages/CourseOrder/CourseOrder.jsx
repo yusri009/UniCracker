@@ -1,4 +1,4 @@
-import CourseResultsTable from "../components/CourseResultsTable";
+import CourseResultsTable from "../../components/CourseResultsTable/CourseResultsTable";
 import "./courseorder.css";
 
 export default function CourseOrder() {
