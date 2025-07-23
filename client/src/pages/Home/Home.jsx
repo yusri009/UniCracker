@@ -10,11 +10,9 @@ export default function Home() {
           <div className="hero-content">
             <h2>Simplify Your University Admission Journey</h2>
             <p>
-              Struggling with university course selection after A/Ls?
-              <br />
-              UniCracker helps you choose the right course, order them smartly,
-              <br />
-              and complete the UGC application — all for free.
+              Struggling with university course selection after A/Ls? UniCracker
+              helps you choose the right course, order them smartly, and
+              complete the UGC application — all for free.
             </p>
             <p style={{ fontSize: "0.8rem", marginTop: "-1rem" }}>
               Made for Sri Lankan Students | 100% Free | Based on Z-Score
@@ -149,9 +147,8 @@ export default function Home() {
             }}
           >
             Start your higher education journey with confidence. Use UniCracker
-            to find the best-fit courses based on your Z-score, interests,
-            <br />
-            and university dreams.
+            to find the best-fit courses based on your Z-score, interests, and
+            university dreams.
           </p>
           <Link
             to="/courseorder"
