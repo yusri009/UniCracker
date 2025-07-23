@@ -483,7 +483,6 @@ const LoginRegister = () => {
               </form>
             </div>
           </div>
-
           <div className="form-footer">
             <p>
               {isLoginForm

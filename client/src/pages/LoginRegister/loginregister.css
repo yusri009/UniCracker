@@ -529,6 +529,8 @@ select.error {
 
 /* Form Footer */
 .form-footer {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -893,7 +895,7 @@ select.error {
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 880px) {
   .login-register-container {
     flex-direction: column;
   }
@@ -907,9 +909,9 @@ select.error {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .login-register-container {
-    margin: 1rem;
+    margin: 2rem 1rem 1rem;
   }
 
   .form-row {
@@ -923,7 +925,30 @@ select.error {
     gap: 0.5rem;
   }
 
+  .social-login {
+    margin: 0.3rem 0;
+  }
   .social-icons {
     flex-wrap: wrap;
+    margin-top: -1rem;
+  }
+  .social-btn {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+  }
+  .back-button {
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+    border-radius: 0 0 10px 10px;
+    position: fixed;
+    box-shadow: var(--shadow);
+  }
+  .back-button i {
+    width: 30px;
+    height: 30px;
   }
 }

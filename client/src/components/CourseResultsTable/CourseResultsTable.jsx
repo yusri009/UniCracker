@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./courseresultstable.css";
 
 export default function CourseResultsTable() {
-  // Sample data for demonstration
   const initialCourses = [
     {
       id: 1,
@@ -15,7 +14,6 @@ export default function CourseResultsTable() {
       avgZScore: 1.7815,
       disabled: false,
     },
-
     {
       id: 3,
       uniCode: "UOP789",
@@ -82,7 +80,6 @@ export default function CourseResultsTable() {
       avgZScore: 1.298,
       disabled: false,
     },
-
     {
       id: 15,
       uniCode: "UWU010",
@@ -96,7 +93,6 @@ export default function CourseResultsTable() {
     },
   ];
 
-  // State management
   const [courses, setCourses] = useState(initialCourses);
   const [filteredCourses, setFilteredCourses] = useState(initialCourses);
   const [sortConfig, setSortConfig] = useState({
@@ -111,7 +107,6 @@ export default function CourseResultsTable() {
   const [draggedItem, setDraggedItem] = useState(null);
   const [dragOverItem, setDragOverItem] = useState(null);
 
-  // Extract unique categories on component mount
   useEffect(() => {
     const uniqueCourses = [...new Set(courses.map((item) => item.course))];
     const uniqueUniversities = [
@@ -121,16 +116,13 @@ export default function CourseResultsTable() {
     setCourseCategories(uniqueCourses);
     setUniversityCategories(uniqueUniversities);
 
-    // Initially select all categories
     setSelectedCourseCategories(uniqueCourses);
     setSelectedUniversityCategories(uniqueUniversities);
   }, []);
 
-  // Apply filters and sorting
   useEffect(() => {
     let result = [...courses];
 
-    // Apply category filters
     if (
       selectedCourseCategories.length > 0 ||
       selectedUniversityCategories.length > 0
@@ -142,7 +134,6 @@ export default function CourseResultsTable() {
       );
     }
 
-    // Apply sorting
     if (sortConfig.key) {
       result.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -163,7 +154,6 @@ export default function CourseResultsTable() {
     sortConfig,
   ]);
 
-  // Sorting handler
   const requestSort = (key) => {
     let direction = "ascending";
     if (sortConfig.key === key && sortConfig.direction === "ascending") {
@@ -172,13 +162,11 @@ export default function CourseResultsTable() {
     setSortConfig({ key, direction });
   };
 
-  // Get sort direction indicator
   const getSortDirectionIndicator = (key) => {
     if (sortConfig.key !== key) return "";
     return sortConfig.direction === "ascending" ? "⇣" : "⇡";
   };
 
-  // Toggle course category selection
   const handleCourseFilterChange = (category) => {
     setSelectedCourseCategories((prev) => {
       if (prev.includes(category)) {
@@ -189,7 +177,6 @@ export default function CourseResultsTable() {
     });
   };
 
-  // Toggle university category selection
   const handleUniversityFilterChange = (category) => {
     setSelectedUniversityCategories((prev) => {
       if (prev.includes(category)) {
@@ -200,9 +187,7 @@ export default function CourseResultsTable() {
     });
   };
 
-  // Toggle row disabled state
   const toggleRowDisabled = (id, e) => {
-    // Prevent row disabling when clicking on drag button
     if (e.target.className === "drag-btn") return;
 
     setCourses((prev) =>
@@ -212,20 +197,16 @@ export default function CourseResultsTable() {
     );
   };
 
-  // Summarize and reorder enabled rows
   const handleSummarize = () => {
     const enabledCourses = courses.filter((course) => !course.disabled);
     const disabledCourses = courses.filter((course) => course.disabled);
 
-    // Sort enabled courses by average Z-score (or any other criteria)
     const sortedEnabled = [...enabledCourses].sort(
       (a, b) => b.avgZScore - a.avgZScore
     );
 
-    // Combine sorted enabled courses with disabled courses at the end
     setCourses([...sortedEnabled, ...disabledCourses]);
 
-    // Visual feedback for summarize action
     const tableElement = document.querySelector(".custom-course-table");
     if (tableElement) {
       tableElement.classList.add("summarize-animation");
@@ -235,17 +216,14 @@ export default function CourseResultsTable() {
     }
   };
 
-  // Drag and drop handlers
   const handleDragStart = (e, position) => {
     setDraggedItem(position);
-    // Add visual feedback
     e.target.style.opacity = "0.4";
     e.dataTransfer.effectAllowed = "move";
   };
 
   const handleDragEnter = (e, position) => {
     setDragOverItem(position);
-    // Add visual feedback for drop target
     e.target.closest("tr").classList.add("drag-over");
   };
 
@@ -255,38 +233,24 @@ export default function CourseResultsTable() {
   };
 
   const handleDragLeave = (e) => {
-    // Remove visual feedback
     e.target.closest("tr")?.classList.remove("drag-over");
   };
 
   const handleDrop = (e) => {
     e.preventDefault();
-
-    // Remove visual feedback
     e.target.closest("tr")?.classList.remove("drag-over");
 
-    // Copy the array to avoid direct state mutation
     const _courses = [...courses];
-
-    // Remove the dragged item
     const draggedItemContent = _courses[draggedItem];
-
-    // Remove from original position
     _courses.splice(draggedItem, 1);
-
-    // Add at new position
     _courses.splice(dragOverItem, 0, draggedItemContent);
 
-    // Reset drag state
     setDraggedItem(null);
     setDragOverItem(null);
-
-    // Update the array
     setCourses(_courses);
   };
 
   const handleDragEnd = (e) => {
-    // Reset opacity
     e.target.style.opacity = "1";
     e.target.classList.remove("dragging");
   };
@@ -309,7 +273,6 @@ export default function CourseResultsTable() {
       </div>
 
       <div className="table-layout">
-        {/* Category Filters - Now aligned to the left */}
         <div className="filter-sidebar">
           <h3 className="filter-title">Filter by</h3>
 
