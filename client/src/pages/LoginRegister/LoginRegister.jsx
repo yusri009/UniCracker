@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./loginregister.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import "./loginregister.css";
 
 const LoginRegister = () => {
+  const navigate = useNavigate();
   const [isLoginForm, setIsLoginForm] = useState(true);
   const [formData, setFormData] = useState({
     // Login form fields
@@ -15,7 +19,6 @@ const LoginRegister = () => {
     registerConfirmPassword: "",
     registerZScore: "",
     registerDistrict: "",
-    registerStream: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -78,22 +81,59 @@ const LoginRegister = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e, formType) => {
+  const handleSubmit = async (e, formType) => {
     e.preventDefault();
 
     if (validateForm(formType)) {
       setIsSubmitting(true);
+      try {
+        const endpoint = formType === "register" ? "/register" : "/login";
+        const payload =
+          formType === "register"
+            ? {
+                name: formData.registerName,
+                email: formData.registerEmail,
+                password: formData.registerPassword,
+                zScore: formData.registerZScore,
+                district: formData.registerDistrict,
+              }
+            : {
+                email: formData.loginEmail,
+                password: formData.loginPassword,
+              };
 
-      // Simulate API call
-      setTimeout(() => {
+        const response = await axios.post(endpoint, payload);
+
+        if (response.data.success) {
+          toast.success(response.data.message || "Operation successful!");
+          setFormData({
+            loginEmail: "",
+            loginPassword: "",
+            registerName: "",
+            registerEmail: "",
+            registerPassword: "",
+            registerConfirmPassword: "",
+            registerZScore: "",
+            registerDistrict: "",
+            registerStream: "",
+          });
+          navigate("/courseorder");
+        }
+      } catch (error) {
+        console.error("Error during form submission:", error);
+
+        if (error.response) {
+          const backendError =
+            error.response.data?.error || "An error occurred!";
+          toast.error(backendError);
+        } else if (error.request) {
+          toast.error("No response from server. Please check your connection.");
+        } else {
+          toast.error("Something went wrong. Please try again.");
+        }
+      } finally {
         setIsSubmitting(false);
-        // Show success message or redirect
-        alert(
-          formType === "login"
-            ? "Login successful!"
-            : "Registration successful!"
-        );
-      }, 1500);
+      }
     }
   };
 
