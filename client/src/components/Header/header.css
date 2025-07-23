@@ -4,6 +4,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 1000;
 }
 
@@ -12,6 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem 3rem;
+  height: 2.5rem;
 }
 
 .logo {
@@ -20,13 +22,13 @@ header {
 }
 
 .logo img {
-  height: 40px;
+  height: 1.9rem;
   width: auto;
-  margin-top: -8px;
+  margin-top: -5px;
 }
 
 .logo h1 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: var(--primary-color);
   font-weight: 700;
 }
@@ -34,6 +36,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: -5px;
 }
 .nav-links {
   list-style: none;
@@ -76,6 +79,22 @@ header {
   height: 3px;
   background-color: var(--primary-color);
 }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.nav-search,
+.nav-login {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.4s;
+}
+:is(.nav-login, .nav-search):hover {
+  color: var(--primary-color);
+}
 
 .nav-toggle {
   display: none;
@@ -93,6 +112,12 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
+button.nav-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 880px) {
   .nav-links {
     display: none;
@@ -102,9 +127,9 @@ header {
     position: absolute;
     height: 100vh;
     width: 250px;
-    top: 55px;
+    top: 40px;
     right: 0;
-    padding: 5rem 0;
+    padding: 1rem 0;
     background-color: #fff;
     box-shadow: var(--shadow);
   }
@@ -117,19 +142,25 @@ header {
     display: block;
   }
 
-  .navbar .btn {
-    margin-left: auto;
+  .nav-tab {
+    display: flex;
+    flex-direction: column;
   }
   .nav-tab .btn {
-    /* display: none; */
-    flex-direction: column;
-    align-items: flex-start;
-    /* gap: 1.7rem !important; */
+    display: none;
     position: absolute;
-    top: 60px;
-    /* right: 0; */
-    /* padding: 5rem 0; */
-    margin-left: -8rem;
+    top: 14.7rem;
+    margin-left: -9rem;
+    background-color: transparent;
+  }
+  .nav-tab .btn.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 440px) {
+  .navbar {
+    padding: 0.2rem 0.5rem;
   }
 }
 
