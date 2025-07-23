@@ -44,7 +44,7 @@ export default function Header() {
             </li>
           </ul>
           <div className="nav-actions">
-            <i className="ri-search-line nav-search"></i>
+            {/* <i className="ri-search-line nav-search"></i> */}
 
             <NavLink to="/login">
               <i className="ri-user-line nav-login"></i>
