@@ -7,6 +7,7 @@
   );
   margin-top: 20px;
 }
+
 .course-search {
   padding: 2rem;
   background-color: white;
@@ -20,28 +21,36 @@
   justify-content: center;
   flex-direction: column;
 }
+
 .column {
   display: flex;
+  gap: 1rem;
   margin: 0 10px;
 }
+
 .form-group {
-  margin: 0rem 1rem 1rem 1rem;
+  margin: 0 1rem 1rem 1rem;
+  flex: 1;
 }
+
 .form-group.row1,
-.row2 {
+.form-group.row2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  margin-right: 2rem;
+  flex-wrap: wrap;
 }
+
 .form-group.row1 {
   margin-left: -2rem;
 }
+
 .form-group label {
   display: block;
   font-weight: 500;
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 .form-group input,
@@ -52,12 +61,59 @@
   border-radius: 5px;
   font-family: inherit;
   cursor: pointer;
-  width: auto;
 }
+
 .form-group #district {
-  width: 300%;
-  margin-left: 2rem;
+  width: 100%;
+  margin-left: 0;
 }
+
 .form-group #zscore {
-  margin-left: 2rem;
+  margin-left: 0;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 880px) {
+  .column {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .form-group.row1,
+  .form-group.row2 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem;
+    margin: 0;
+  }
+
+  .form-group #district {
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-group #zscore {
+    margin: 0;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100% !important;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-search {
+    padding: 1rem;
+  }
+
+  .form-group {
+    margin: 0.5rem 0;
+  }
 }

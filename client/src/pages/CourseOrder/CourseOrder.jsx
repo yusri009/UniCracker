@@ -67,53 +67,47 @@ export default function CourseOrder() {
   const results = ["A", "B", "C", "S", "W"];
 
   const districts = [
+    "Ampara",
+    "Anuradhapura",
+    "Badulla",
+    "Batticaloa",
     "Colombo",
-    "Gampaha",
-    "Kalutara",
-    "Kandy",
-    "Matale",
-    "Nuwara Eliya",
     "Galle",
-    "Matara",
+    "Gampaha",
     "Hambantota",
     "Jaffna",
-    "Kilinochchi",
-    "Mannar",
-    "Vavuniya",
-    "Mullaitivu",
-    "Batticaloa",
-    "Ampara",
-    "Trincomalee",
-    "Kurunegala",
-    "Puttalam",
-    "Anuradhapura",
-    "Polonnaruwa",
-    "Badulla",
-    "Monaragala",
-    "Ratnapura",
+    "Kalutara",
+    "Kandy",
     "Kegalle",
+    "Kilinochchi",
+    "Kurunegala",
+    "Mannar",
+    "Matale",
+    "Matara",
+    "Monaragala",
+    "Mullaitivu",
+    "Nuwara Eliya",
+    "Polonnaruwa",
+    "Puttalam",
+    "Ratnapura",
+    "Trincomalee",
+    "Vavuniya",
   ];
 
   return (
     <>
-      {/* Course Search Section */}
       <section className="course-search-section">
         <div className="container">
           <div className="course-search">
             <h2
-              style={{
-                marginBottom: "1.5rem",
-                color: "var(--primary-color)",
-              }}
+              style={{ marginBottom: "1.5rem", color: "var(--primary-color)" }}
             >
               Enter Your Details
             </h2>
             <form className="search-form">
               <div className="column">
                 <div className="form-group row1">
-                  <label htmlFor="zscore" id="zscore">
-                    Your Z-Score
-                  </label>
+                  <label htmlFor="zscore">Your Z-Score</label>
                   <input
                     type="number"
                     id="zscore"
@@ -123,7 +117,6 @@ export default function CourseOrder() {
                     required
                   />
                 </div>
-                {/* District */}
                 <div className="form-group row2">
                   <label htmlFor="district">District</label>
                   <select id="district" name="district" defaultValue="">
@@ -138,104 +131,42 @@ export default function CourseOrder() {
                   </select>
                 </div>
               </div>
+
               <div className="column">
-                {/* Subject 1 */}
-                <div className="form-group">
-                  <label>Subject 1</label>
-                  <div style={{ display: "flex", gap: "0.5rem" }}>
-                    <select
-                      className="subject-label"
-                      name="subject1"
-                      required
-                      defaultValue=""
-                    >
-                      <option value="" disabled>
-                        Select Subject
-                      </option>
-                      {subjects.map((subject) => (
-                        <option key={subject.code} value={subject.code}>
-                          {subject.name}
+                {[1, 2, 3].map((num) => (
+                  <div className="form-group" key={num}>
+                    <label>{`Subject ${num}`}</label>
+                    <div style={{ display: "flex", gap: "0.5rem" }}>
+                      <select
+                        className="subject-label"
+                        name={`subject${num}`}
+                        required
+                        defaultValue=""
+                      >
+                        <option value="" disabled>
+                          Select Subject
                         </option>
-                      ))}
-                    </select>
-                    <select name="result1" required defaultValue="">
-                      <option value="" disabled>
-                        Result
-                      </option>
-                      {results.map((results) => (
-                        <option key={results} value={results}>
-                          {results}
+                        {subjects.map((subject) => (
+                          <option key={subject.code} value={subject.code}>
+                            {subject.name}
+                          </option>
+                        ))}
+                      </select>
+                      <select name={`result${num}`} required defaultValue="">
+                        <option value="" disabled>
+                          Result
                         </option>
-                      ))}
-                    </select>
+                        {results.map((result) => (
+                          <option key={result} value={result}>
+                            {result}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
-                </div>
-
-                {/* Subject 2 */}
-                <div className="form-group">
-                  <label>Subject 2</label>
-                  <div style={{ display: "flex", gap: "0.5rem" }}>
-                    <select
-                      className="subject-label"
-                      name="subject2"
-                      required
-                      defaultValue=""
-                    >
-                      <option value="" disabled>
-                        Select Subject
-                      </option>
-                      {subjects.map((subject) => (
-                        <option key={subject.code} value={subject.code}>
-                          {subject.name}
-                        </option>
-                      ))}
-                    </select>
-                    <select name="result2" required defaultValue="">
-                      <option value="" disabled>
-                        Result
-                      </option>
-                      {results.map((results) => (
-                        <option key={results} value={results}>
-                          {results}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Subject 3 */}
-                <div className="form-group">
-                  <label>Subject 3</label>
-                  <div style={{ display: "flex", gap: "0.5rem" }}>
-                    <select
-                      className="subject-label"
-                      name="subject3"
-                      required
-                      defaultValue=""
-                    >
-                      <option value="" disabled>
-                        Select Subject
-                      </option>
-                      {subjects.map((subject) => (
-                        <option key={subject.code} value={subject.code}>
-                          {subject.name}
-                        </option>
-                      ))}
-                    </select>
-                    <select name="result3" required defaultValue="">
-                      <option value="" disabled>
-                        Result
-                      </option>
-                      {results.map((results) => (
-                        <option key={results} value={results}>
-                          {results}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+                ))}
               </div>
-              {/* Button */}
+
               <div
                 className="form-group"
                 style={{
@@ -257,7 +188,6 @@ export default function CourseOrder() {
         </div>
       </section>
 
-      {/* Course Results Section */}
       <section
         className="course-results-section"
         style={{ padding: "2rem 0 5rem" }}
