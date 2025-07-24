@@ -6,7 +6,7 @@ export default function AboutUs() {
       {/* Page Banner */}
       <section
         className="hero"
-        style={{ height: "40vh", marginBottom: "2rem" }}
+        style={{ height: "60vh", marginBottom: "2rem" }}
       >
         <div className="container">
           <div className="hero-content">

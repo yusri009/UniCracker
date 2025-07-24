@@ -117,7 +117,10 @@ const LoginRegister = () => {
             registerDistrict: "",
             registerStream: "",
           });
-          navigate("/courseorder");
+          navigate("/dashboard");
+          window.location.reload();
+        } else {
+          toast.error(response.data.error || "An error occurred!");
         }
       } catch (error) {
         console.error("Error during form submission:", error);

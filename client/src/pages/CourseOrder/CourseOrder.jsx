@@ -1,7 +1,15 @@
+import { useState } from "react";
 import CourseResultsTable from "../../components/CourseResultsTable/CourseResultsTable";
 import "./courseorder.css";
 
 export default function CourseOrder() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+  };
+
   const subjects = [
     { code: "S01", name: "Physics" },
     { code: "S02", name: "Chemistry" },
@@ -104,7 +112,8 @@ export default function CourseOrder() {
             >
               Enter Your Details
             </h2>
-            <form className="search-form">
+
+            <form className="search-form" onSubmit={handleSubmit}>
               <div className="column">
                 <div className="form-group row1">
                   <label htmlFor="zscore">Your Z-Score</label>
@@ -119,7 +128,12 @@ export default function CourseOrder() {
                 </div>
                 <div className="form-group row2">
                   <label htmlFor="district">District</label>
-                  <select id="district" name="district" defaultValue="">
+                  <select
+                    id="district"
+                    name="district"
+                    defaultValue=""
+                    required
+                  >
                     <option value="" disabled>
                       Select your district
                     </option>
@@ -176,7 +190,7 @@ export default function CourseOrder() {
                 }}
               >
                 <button
-                  type="button"
+                  type="submit"
                   className="btn"
                   style={{ width: "200px" }}
                 >
@@ -188,21 +202,23 @@ export default function CourseOrder() {
         </div>
       </section>
 
-      <section
-        className="course-results-section"
-        style={{ padding: "2rem 0 5rem" }}
-      >
-        <div className="container">
-          <div className="section-title">
-            <h2>Your Recommended Course Order</h2>
-            <p>
-              Discover the best-fit university courses ranked by your Z-score
-              and preferences to maximize your admission chances.
-            </p>
+      {isSubmitted && (
+        <section
+          className="course-results-section"
+          style={{ padding: "2rem 0 5rem" }}
+        >
+          <div className="container">
+            <div className="section-title">
+              <h2>Your Recommended Course Order</h2>
+              <p>
+                Discover the best-fit university courses ranked by your Z-score
+                and preferences to maximize your admission chances.
+              </p>
+            </div>
+            <CourseResultsTable />
           </div>
-          <CourseResultsTable />
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 }

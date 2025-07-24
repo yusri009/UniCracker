@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const path = require("path");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 const connectDatabase = require("./config/connectDatabase");
 dotenv.config({ path: path.join(__dirname, "config", "config.env") });
 
@@ -11,6 +12,8 @@ connectDatabase();
 
 // Middleware
 app.use(express.json());
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/", require("./routes/authRoute"));
 
