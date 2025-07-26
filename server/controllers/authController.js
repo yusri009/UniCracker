@@ -1,9 +1,6 @@
 const User = require("../models/user");
 const { hashPassword, comparePassword } = require("../helpers/auth");
 const jwt = require("jsonwebtoken");
-const dotenv = require("dotenv");
-const path = require("path");
-dotenv.config({ path: path.join(__dirname, "config", "config.env") });
 
 // Controller tests if the server is running
 const test = (req, res) => {

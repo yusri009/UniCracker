@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const localDB = true; // Set to true for local development, false for production
+const localDB = false; // Set to true for local MongoDB, false for remote MongoDB
 const connectDatabase = () => {
   mongoose
     .connect(localDB ? process.env.DB_URL : process.env.MONGO_URL)
